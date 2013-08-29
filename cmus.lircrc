@@ -1,0 +1,29 @@
+begin
+	prog = irexec
+	button = NEXT
+	config = tmux send-keys -t cmus:0 b
+end
+
+begin
+	prog = irexec
+	button = PREV
+	config = tmux send-keys -t cmus:0 z
+end
+
+begin
+	prog = irexec
+	button = PLAY
+	config = tmux send-keys -t cmus:0 c
+end
+
+begin
+	prog = irexec
+	button = VOLUME+
+	config = tmux send-keys -t cmus:0 +
+end
+
+begin
+	prog = irexec
+	button = VOLUME-
+	config = tmux send-keys -t cmus:0 -
+end

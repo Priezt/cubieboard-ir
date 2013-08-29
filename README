@@ -1,0 +1,15 @@
+modprobe sun4i_ir
+
+sudo apt-get install lirc
+
+"ln -s" .conf files to /etc/lirc/
+
+service lirc stop
+service lirc start
+
+use "irw" to test remote key code
+
+ln -s /dev/lircd /var/run/lirc/lircd
+
+irexec cmus.lircrc
+

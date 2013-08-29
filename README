@@ -1,15 +1,18 @@
-modprobe sun4i_ir
+sudo modprobe sun4i_ir
+
+lsmod | grep sun4i_ir
 
 sudo apt-get install lirc
 
-"ln -s" .conf files to /etc/lirc/
+sudo ln -s ~linaro/code/cubieboard-ir/hardware.conf /etc/lirc/hardware.conf
+sudo ln -s ~linaro/code/cubieboard-ir/lircd-arduino-rc.conf /etc/lirc/lircd.conf
 
-service lirc stop
-service lirc start
+sudo service lirc stop
+sudo service lirc start
+
+sudo ln -s /dev/lircd /var/run/lirc/lircd
 
 use "irw" to test remote key code
-
-ln -s /dev/lircd /var/run/lirc/lircd
 
 irexec cmus.lircrc
 

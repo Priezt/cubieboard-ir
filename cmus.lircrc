@@ -27,3 +27,9 @@ begin
 	button = VOLUME-
 	config = tmux send-keys -t cmus:0 -
 end
+
+begin
+	prog = irexec
+	button = SWITCH
+	config = ssh prieztx 'net session \\\\\\\\localhost /delete'
+end
